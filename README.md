@@ -1,4 +1,4 @@
-# "telegram-bot as serverless worker" - development-helper
+# "Serverless-telegram-bot" - development-helper
 
 ## The usecase for this tool:
 Development of a telegram-bot that will run serverless as a Cloudflare worker.
@@ -8,12 +8,12 @@ It let's you forward telegram messages to your local dev environment of your wor
 
 ## Installation
 ### Clone this repo
-```git clone git@github.com:realestninja/telegram-bot-as-cloudflare-worker-development-helper.git```
+```git clone git@github.com:realestninja/serverless-telegram-bot-development-helper.git```
 
 ### Add your bot token
 
 ```
-cd telegram-bot-as-cloudflare-worker-development-helper/
+cd serverless-telegram-bot-development-helper/
 echo "BOT_TOKEN = <your bot token>" >> .env
 yarn install
 yarn dev
