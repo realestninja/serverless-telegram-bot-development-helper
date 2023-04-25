@@ -1,7 +1,7 @@
 # "Serverless-telegram-bot" - development-helper
 
 ## The usecase for this tool:
-Development of a telegram-bot that will run serverless as a Cloudflare worker.
+Development of a telegram-bot that will run serverless as a Cloudflare worker. Use the [serverless-telegram-bot-boilerplate](https://github.com/realestninja/serverless-telegram-bot-boilerplate) in combination with this repository for a quick start.
 
 ## What this tool does:
 It let's you forward telegram messages to your local dev environment of your worker, simulating the web-hook. This makes it easy to develop the serverless telegram-bot.
