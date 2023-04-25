@@ -2,11 +2,9 @@ import { config } from "dotenv";
 import axios from 'axios';
 import { Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
-import { PORT } from "./constants.js";
+import { WRANGLER_LOCAL } from "./constants.js";
 
 config()
-
-const WRANGLER_LOCAL = `http://localhost:${PORT}`;
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
