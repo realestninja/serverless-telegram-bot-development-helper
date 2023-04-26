@@ -4,13 +4,15 @@ import { Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
 import { WRANGLER_LOCAL } from "./constants.js";
 
-config()
+config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.on(message(), (ctx) => {
   if (Object.prototype.hasOwnProperty.call(ctx, "update")) {
-    axios.post(WRANGLER_LOCAL, ctx.update);
+    const { update, botInfo: { first_name } } = ctx;
+    console.log("Message received from:", first_name);
+    axios.post(WRANGLER_LOCAL, update);
   }
 });
 
