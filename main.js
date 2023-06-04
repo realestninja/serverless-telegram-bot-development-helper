@@ -16,6 +16,14 @@ bot.on(message(), (ctx) => {
   }
 });
 
+bot.on("callback_query", (ctx) => {
+  if (Object.prototype.hasOwnProperty.call(ctx, "update")) {
+    const { update, botInfo: { first_name } } = ctx;
+    console.log("Callback received from:", first_name);
+    axios.post(WRANGLER_LOCAL, update);
+  }
+});
+
 bot.launch();
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
